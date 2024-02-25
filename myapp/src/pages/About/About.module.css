@@ -1,0 +1,21 @@
+.about {
+    display: flex;
+    padding: 0 128px;
+    flex-direction: column;
+}
+
+.aboutMainContent {
+ font-family: "Manrope", sans-serif;
+ font-weight: 500;
+ font-size: 14px;
+ text-align: left;
+ padding-top: 20px;
+}
+
+.img {
+    max-width: 100%;
+    width: 1440px;
+    height: 300px;
+    object-fit: cover;
+   
+}

@@ -1,0 +1,6 @@
+.footer {
+    display: flex;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    justify-content: center;
+}

@@ -1,0 +1,191 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    background: rgba(0, 0, 0, 0.6);
+    /* background-color: #12141780; */
+    /* transition: opacity var(--bg-colorlight), visibility var(--bg-colorlight); */
+    transition-duration: 250ms;
+}
+
+.modal-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    display: grid;
+    gap: 14px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    width: 541px;
+    height: auto;
+    border-radius: 24px;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.car {
+    display: flex;
+    width: 461px;
+    height: 248px;
+    top: 40px;
+    left: 40px;
+    border-radius: 14px;
+    margin: 0 auto;
+}
+
+.modal-main-pieceone {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    max-width: 461px;
+    margin: 0 auto;
+}
+
+.modal-main-pieceone-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+    color: #121417;
+}
+
+.modal-main-pieceone-span {
+    color: #3470FF;
+}
+
+.modal-main-pieceone-span2 {
+    color: #3470FF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -2%;
+}
+
+.modal-main-pieceone-title2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.modal-main-pieceone-frame {
+    display: block;
+    margin-bottom: 6px;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.modal-main-pieceone-frame-sub {
+    display: flex;
+    color: #12141780;
+}
+
+.modal-main-pieceone-frame-info {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 8px;
+}
+
+.modal-main-pieceone-frame-sub:first-child {
+    padding-bottom: 4px;
+}
+
+.modal-main-frame-el {
+    border-right: 1px solid #1214171A;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.modal-main-frame-el:first-child {
+    padding-left: 0px;
+}
+
+.modal-main-frame-el:last-child {
+    border: none;
+}
+
+.modal-main-frame-btn {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+
+    border-radius: 35px;
+    color: #363535;
+    background-color: #F9F9F9;
+    padding: 7px 14px;
+}
+
+.modal-main-frame-btn2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -2%;
+    text-align: left;
+
+    border-radius: 35px;
+    color: #363535;
+    background-color: #F9F9F9;
+    padding: 7px 14px;
+}
+
+.modal-main-content {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+}
+
+.btn {
+    display: flex;
+    margin-left: 40px;
+
+    width: 168px;
+    height: 44px;
+
+    padding: 12px 50px;
+    border-radius: 12px;
+    border: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    background-color: #3470FF;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background-color: #0B44CD;
+    cursor: pointer;
+}
