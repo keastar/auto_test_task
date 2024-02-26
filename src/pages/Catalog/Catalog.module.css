@@ -28,14 +28,27 @@
     color: #8A8A89;
 }
 
-.catalog_input_form1 {
+.catalog_input_form1[type=text],textarea {
+    /* position: fixed; */
     display: flex;
     width: 224px;
     height: 48px;
+    font-size: 20px;
     background: #F7F7FB;
     border: none;
+    outline: none;
     border-radius: 14px;
+    padding: 0px 15px;
+    z-index: 1;
+}
 
+.autoDataList {
+    position: relative;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    transform: translateX(-10px);
+    z-index: 100;
 }
 
 .catalog_input_form2 {
@@ -44,6 +57,7 @@
     height: 48px;
     background: #F7F7FB;
     border: none;
+    outline: none;
     border-radius: 14px;
 
 }
@@ -61,8 +75,10 @@
     border: 0px 2px 0px 0px;
     border-right: 2px solid #8A8A8933;
     border: none;
+    outline: none;
     background: #F7F7FB;
     padding: 0;
+    padding-left: 15px;
     margin: 0;
 }
 
@@ -72,7 +88,10 @@
     left: 160px;
     border-radius: 0px 14px 14px 0px;
     border: none;
+    outline: none;
     background: #F7F7FB;
+    padding: 0px;
+    padding-left: 15px;
 }
 
 .catalog_auto {

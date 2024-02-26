@@ -11,6 +11,7 @@ export const AutoBoard = ({
   country,
   rentalCompany,
   type,
+  img,
   id,
   accessories,
   engineSize,
@@ -20,7 +21,7 @@ export const AutoBoard = ({
       <div className={css.AutoBoard}>
         <div className={css.imageBorder}>
           {/* <icon></icon> */}
-          <img src={car} className={css.image} alt="car" />
+          <img src={img} className={css.image} alt="car" />
         </div>
         <div className={css.nameInfo}>
           <h6 className={css.title}>
