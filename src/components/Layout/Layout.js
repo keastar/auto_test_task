@@ -2,12 +2,13 @@ import React, { Suspense } from "react";
 import css from "./Layout.module.css";
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
-import { Container } from "../Container/Container.js";
+// import { Container } from "../Container/Container.js";
+import { Page } from "../Page/Page.js";
 // import { Footer } from "../Footer/Footer.js";
 
 export const Layout = () => {
   return (
-    <Container>
+    <Page>
       <header className={css.AppHeader}>
         <nav className={css.nav}>
           {/* отвечает за часть привью в адресной строке (url) */}
@@ -22,6 +23,6 @@ export const Layout = () => {
         </Suspense>
       </main>
       {/* <Footer /> */}
-    </Container>
+    </Page>
   );
 };

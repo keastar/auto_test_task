@@ -93,39 +93,3 @@
     padding: 0px;
     padding-left: 15px;
 }
-
-.catalog_auto {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(274px, auto));
-    gap: 29px;
-    padding-top: 20px;
-   
-}
-
-.btn {
-    display: flex;
-    width: 274px;
-    height: 44px;
-
-    padding: 12px 99px;
-    margin: 20px 0px;
-    border-radius: 14px;
-    border: none;
-
-    font-family: "Manrope", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: center;
-
-    background-color: #3470FF;
-    color: #ffffff;
-}
-
-/* .catalog_auto_board {
-    width: 174px;
-    height: auto;
-    margin: 0;
-    padding: 0;
-} */

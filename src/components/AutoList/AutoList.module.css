@@ -5,7 +5,7 @@
 };
 
 .Wrapper {
-     border: 1px solid black;
+    border: 1px solid black;
     border-radius: 4px;
 };
 .Wrapper >a {
@@ -18,3 +18,18 @@
     margin-bottom: 0;
     color: black;
 };
+
+.catalog_auto { 
+    padding-top: 20px;
+}
+
+.catalog_auto_each {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(274px, auto));
+    gap: 29px;
+}
+
+.catalog_auto_board {
+    display: flex;
+    margin: 0 10px;
+}

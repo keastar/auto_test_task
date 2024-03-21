@@ -1,24 +1,16 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
-import { AutoBoard } from "../../components/AutoBoard/AutoBoard.js";
-// import { SearchInput } from "../../components/SearchInput/SearchInput.js";
-// import { AutoList } from "../../components/AutoList/AutoList.js";
 import { getAutos } from "../../examplAPI.js";
+import { AutoList } from "../../components/AutoList/AutoList.js";
 import css from "./Catalog.module.css";
 
 const Catalog = () => {
   const autos = getAutos();
   const [searchParams, setSearchParams] = useSearchParams();
   const autoMake = searchParams.get("autoMake") ?? "";
-  const autoRentalPrice = searchParams.get("autoRentalPrice") ?? "";
-  const autoMileage = searchParams.get("automileage") ?? "";
-
-  const visibleAutos = autos.filter((auto) =>
-    auto.make.toLowerCase().includes(autoMake.toLowerCase())
-  );
-
-  // auto.rentalPrice.toLowerCase().includes(autoRentalPrice.toLowerCase());
+  // const autoRentalPrice = searchParams.get("autoRentalPrice") ?? "";
+  // const autoMileage = searchParams.get("automileage") ?? "";
 
   const updateQueryString = (event) => {
     const autoMake = event.target.value;
@@ -27,6 +19,11 @@ const Catalog = () => {
     }
     setSearchParams({ autoMake: autoMake });
   };
+
+  const onToggleLiked = autos.filter((auto) => auto.like).length;
+  const allAutos = autos.length;
+
+  // const onToggleLiked = () => {};
 
   // const updatePriceQueryString = (event) => {
   //   const autoRentalPrice = event.target.value;
@@ -130,52 +127,11 @@ const Catalog = () => {
           </div> */}
         {/* </div> */}
 
-        <div className={css.catalog_auto}>
-          {visibleAutos.map(
-            ({
-              make,
-              model,
-              year,
-              rentalPrice,
-              city,
-              country,
-              rentalCompany,
-              type,
-              img,
-              id,
-              accessories,
-              engineSize,
-            }) => {
-              return (
-                <div key={id} className={css.catalog_auto_board}>
-                  {/* Здесь будет карточка машинs и кнопка, которая вызывает модалку */}
-                  <AutoBoard
-                    name={make}
-                    model={model}
-                    year={year}
-                    price={rentalPrice}
-                    city={city}
-                    country={country}
-                    rentalCompany={rentalCompany}
-                    type={type}
-                    img={img}
-                    id={id}
-                    accessories={accessories[1]}
-                    engineSize={engineSize}
-                  />
-                  <button
-                    type="button"
-                    className={css.btn}
-                    // onClick={handleClose}
-                  >
-                    Learn more
-                  </button>
-                  {/* <Link to={`${auto}`}>{make}</Link> */}
-                </div>
-              );
-            }
-          )}
-        </div>
+        <AutoList
+          autos={autos}
+          onToggleLiked={onToggleLiked}
+          allAutos={allAutos}
+        />
       </div>
     </>
   );
