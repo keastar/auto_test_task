@@ -1,14 +1,55 @@
 .AutoBoard {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 274px;
     
 }
 .imageBorder {
+    display: block;
     width: 274px;
     height: auto;
     /* border: 1px solid black;
     border-radius: 14px; */
+}
+
+.btn_favorite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 45px;
+    border-color: #ffffff;
+    background:rgba(11, 69, 205, 0.502);
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+    left: 5px;
+}
+
+.btn_favorite:hover {
+    background: rgba(255, 255, 255, 0.753);
+    border-color:#0B44CD;
+    cursor: pointer;
+}
+
+.btn_favorite:active {
+    background: rgba(255, 255, 255, 0.813);
+    border-color: #0B44CD;
+    cursor: pointer;
+}
+
+.btn_icon {
+    color: #ffffff; 
+}
+
+.btn_icon:hover {
+    color: #0B44CD;
+}
+
+.btn_icon:active {
+    color: #0B44CD;
 }
 
 .image {
@@ -85,17 +126,16 @@
 
 .btn {
     display: flex;
-    margin-left: 40px;
-
-    width: 168px;
+    width: 274px;
     height: 44px;
 
-    padding: 12px 50px;
-    border-radius: 12px;
+    padding: 12px 99px;
+    margin: 20px 0px;
+    border-radius: 14px;
     border: none;
 
     font-family: "Manrope", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 20px;
     letter-spacing: 0em;

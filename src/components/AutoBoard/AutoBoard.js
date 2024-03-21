@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useReducer, useContext } from "react";
+import { MyContext } from "../App/App.js";
 import css from "./AutoBoard.module.css";
-import car from "../../images/image1.png";
+import Modal from "../../components/Modall/Modal.js";
+import { StarFilled } from "@ant-design/icons";
+
+const reducer = (key) => key + 1;
 
 export const AutoBoard = ({
   name,
@@ -12,15 +16,47 @@ export const AutoBoard = ({
   rentalCompany,
   type,
   img,
-  id,
   accessories,
   engineSize,
+  fuelConsumption,
+  addToFavorites,
 }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const { setlikedCarrs } = useContext(MyContext);
+
+  const [id, updateId] = useReducer(reducer, 0);
+
+  function addToFavorites() {
+    setlikedCarrs({
+      name,
+      model,
+      year,
+      city,
+      country,
+      rentalCompany,
+      type,
+      img,
+      id,
+      fuelConsumption,
+      engineSize,
+      id: `${name}-${id}`,
+    });
+    updateId();
+  }
+
+  // const addToFavorites = (auto) => {
+  //   setlikedCarrs([...likedCarrs, auto]);
+  //   console.log([likedCarrs]);
+  // };
+
   return (
     <>
       <div className={css.AutoBoard}>
         <div className={css.imageBorder}>
-          {/* <icon></icon> */}
+          <button className={css.btn_favorite} onClick={addToFavorites}>
+            <StarFilled className={css.btn_icon} />
+          </button>
           <img src={img} className={css.image} alt="car" />
         </div>
         <div className={css.nameInfo}>
@@ -38,6 +74,29 @@ export const AutoBoard = ({
           <div className={css.info}>{type}</div>
           <div className={css.info}>{engineSize}</div>
         </div>
+        <button
+          type="button"
+          className={css.btn}
+          onClick={() => setModalIsOpen(true)}
+        >
+          Learn more
+        </button>
+        <Modal
+          isOpen={modalIsOpen}
+          onClose={() => setModalIsOpen(false)}
+          name={name}
+          model={model}
+          year={year}
+          price={rentalPrice}
+          city={city}
+          country={country}
+          rentalCompany={rentalCompany}
+          type={type}
+          image={img}
+          id={id}
+          fuelConsumption={fuelConsumption}
+          engineSize={engineSize}
+        />
       </div>
     </>
   );
