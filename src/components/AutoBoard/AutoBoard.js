@@ -19,7 +19,6 @@ export const AutoBoard = ({
   accessories,
   engineSize,
   fuelConsumption,
-  addToFavorites,
 }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -44,11 +43,6 @@ export const AutoBoard = ({
     });
     updateId();
   }
-
-  // const addToFavorites = (auto) => {
-  //   setlikedCarrs([...likedCarrs, auto]);
-  //   console.log([likedCarrs]);
-  // };
 
   return (
     <>
